@@ -1,0 +1,17 @@
+1. For your DisjointSets implementation, what is the worst case running time of a single unionoperation?
+O(1) 
+
+2. For your DisjointSets implementation, what is the worst case running time of a single findoperation?
+O(log N) 
+3. Briefly discuss how you went about testing your disjoint sets. Feel free to refer to your submitted test files.
+
+When testing our disjoint sets, we first printed out the different sizes of the maze to be sure that there’s no cycle produced as well as only one path presented. We have also printed out the array representation of the existence of edges and draw the maze out on paper. Once we’ve made sure our code is properly producing the maze in various sizes, we started to test edge cases in which invalid set name or invalid element are passed in. 
+
+
+4. If you worked with a partner, describe how you worked together. If you divided up the tasks, explain how you did so. If you worked on parts together, describe the actual process. Discuss how much time you worked together and how you spent that time (planning, coding, testing, ...). Be sure to describe at least one good thing and one bad thing about the process of working with a partner.
+
+Our team took a few different approaches on tackling this assignment. We have worked both individually and together as a group. For part 1 of the assignment, we have both coded up the implementation individually and combine both of our codes depending on the efficiency. Then we came as a group to work on part 2 of the assignment in a team meeting. We have spent approximately 3 hours on planning the algorithm behind part 2, and another 2 hours to code it up then another 2 hours to testing. One good thing about working together as a team is when one of us is stuck on one part, talking with another partner helps clearing the thoughts. One bad thing about working together is the amount of time one needs to take to understand another person’s code and code it subsequently with what has already been built. 
+
+5. Discuss whether your implementation can build a 1000 x 1000 maze in a reasonable amount of time (and discuss what you consider reasonable). If not, describe what part of your implementation you believe is taking too much time and why you think that is the problem. If so, describe how a change to your code might slow down the creation of a maze of this size and why you expect such a change to matter.
+
+No. We cannot make a 1000x1000 maze in a reasonable amount of time. The program had a OutOfMemoryError. However, with 900x900 Maze size, our implementation is able to build the maze in less than 40 seconds. We think the main culprit is the buildMaze method in our implementation which the big O runtime seems to be 3N. 
